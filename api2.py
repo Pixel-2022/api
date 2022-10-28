@@ -233,7 +233,7 @@ def point():
 
     
     hands.extend(angle5)
-
+    print(hands.shape)
 
     return jsonify(hands),200
 
