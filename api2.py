@@ -222,8 +222,8 @@ def point():
     v11_concat = v10_concat-v9_concat
     v11_concat=v11_concat/np.linalg.norm(v11_concat, axis=1)[:, np.newaxis]
     angle5=np.arccos(np.einsum('nt,nt->n',
-                                        v8[[0, 2], :],
-                                        v8[[1, 3],  :]))
+                                        v11_concat[[0, 2], :],
+                                        v11_concat[[1, 3],  :]))
     angle5 = np.degrees(angle5)
 
     if data_left==1:
