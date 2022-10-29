@@ -132,6 +132,12 @@ def point():
             #print("길이",len(angle3_label))
 
             #print(len(d3))
+            
+            joint_concat[2]=joint3[2]
+            joint_concat[3]=joint3[3]
+            joint_concat[4]=joint3[4]
+            joint_concat[5]=joint3[5]
+            
             hands.extend(angle3)
 
     except:
