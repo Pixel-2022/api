@@ -223,15 +223,16 @@ def point():
     v11_concat=v11_concat/np.linalg.norm(v11_concat, axis=1)[:, np.newaxis]
     angle5=np.arccos(np.einsum('nt,nt->n',
                                         v11_concat[[0, 2], :],
-                                        v11_concat[[1, 3],  :]))
+                                        v11_concat[[1, 3], :]))
     angle5 = np.degrees(angle5)
 
     if data_left==1:
         angle5[1]=180
     elif data_right==1:
         angle5[0]=180
-
     
+    print(joint_concat)
+    print(angle5)
     hands.extend(angle5)
     print(hands)
 
