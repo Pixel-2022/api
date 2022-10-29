@@ -238,7 +238,7 @@ def point():
         hands.extend(d4)
         pass
 
-    print(np.array(hands).shape)
+    print(hands)
     return jsonify(hands),200
 
 
