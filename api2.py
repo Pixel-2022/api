@@ -227,12 +227,10 @@ def point():
     angle5 = np.degrees(angle5)
 
     if data_left==1:
-        angle5[1]=180
-    elif data_right==1:
         angle5[0]=180
+    if data_right==1:
+        angle5[1]=180
     
-    print(joint_concat)
-    print(angle5)
     hands.extend(angle5)
     print(hands)
 
