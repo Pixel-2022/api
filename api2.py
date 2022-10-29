@@ -217,8 +217,8 @@ def point():
         pass
 
 
-    v9_concat = joint_concat[[3,5,2,4]]
-    v10_concat = joint_concat[[5,1,4,0]]
+    v9_concat = joint_concat[[3,5,2,4],:3]
+    v10_concat = joint_concat[[5,1,4,0],:3]
     v11_concat = v10_concat-v9_concat
     v11_concat=v11_concat/np.linalg.norm(v11_concat, axis=1)[:, np.newaxis]
     angle5=np.arccos(np.einsum('nt,nt->n',
