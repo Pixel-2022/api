@@ -239,8 +239,7 @@ def point():
         angle5[0]=180
     if data_right==1:
         angle5[1]=180
-    if angle5==[np.nan, np.nan]:
-        angle5=[180,180]
+    angle5[np.isnan(angle5)]=180
     hands.extend(angle5)
     print(hands)
 
